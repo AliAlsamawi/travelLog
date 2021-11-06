@@ -8,11 +8,18 @@ const travelSchema = new Schema({
   cost: Number,
   worththetrip:Boolean,
   location:String,
+  creator: {
+    id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    },
+    name: String
+  }
   // reviews: [reviewSchema,
 })
 
-const travel = mongoose.model('travel', travelSchema)
+const Travel = mongoose.model('travel', travelSchema)
 
 export {
-  travel,
+  Travel,
 }
