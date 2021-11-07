@@ -1,0 +1,46 @@
+<%- include('../partials/html-head') %> <%- include('../partials/nav') %>
+
+<div class="show-page">
+  <div class="container">
+    <h1>Show page</h1>
+    <div class="card">
+      <h5 class="card-header"><%= travel.title %></h5>
+
+      <ul class="list-group">
+        <li class="list-group-item">🌮<%= travel.rating %></li>
+        <li class="list-group-item">🌮<%= travel.location %></li>
+        <li class="list-group-item">🌮<%= travel.cost %></li>
+      </ul>
+      <div class="blockquote">Created by <%= travel.author.name %></div>
+    </div>
+
+    <% travel.reviews.forEach(review => { %>
+      <div class="list-group">
+        <div class="list-group-item listgroup-item-action">
+          <div class="d-flex justify-content-between">
+            <p>created by</p>
+            <p><%= review.author.name %></p>
+          </div>
+          <p class="mb-1">
+            <%= review.review %>
+          </p>
+          <% if (user && review.author.id.equals(user.profile._id)) { %>
+            <form action="/travels/<%= travel._id %>/reviews/<%=review._id%>?_method=DELETE" method="post">
+              <button class="btn-outline-danger">Delete Comment</button>
+            </form>
+          <% } %>
+        </div>
+      </div>
+    <% }) %>
+
+    <form action="/travels/<%=travel._id %>/reviews" method="post">
+      <div class="form-group">
+        <label for="review">Add review</label>
+        <textarea name="review" id="" cols="30" rows="10" class="form-control"></textarea>
+        <button class="btn btn-secondary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

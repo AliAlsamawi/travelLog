@@ -1,0 +1,27 @@
+<%- include('../partials/html-head') %> <%- include('../partials/nav') %>
+
+<section>
+  <h1>travels</h1>
+  <h2></h2>
+  <div class="row">
+    <% travels.forEach(travel => { %>
+    <div class="col-lg-4 col-md-6 mb-5">
+      <div class="card">
+        <h5 class="card-header"><%= travel.title %></h5>
+
+        <ul class="list-group">
+          <li class="list-group-item">🌮<%= travel.rating %></li>
+          <li class="list-group-item">🌮<%= travel.location %></li>
+          <li class="list-group-item">🌮<%= travel.cost %></li>
+        </ul>
+        <div class="blockquote">Created by <%= travel.author.name %></div>
+        <a href="/travels/<%= travel._id %>" class="btn btn-outline-secondary"
+          >View More</a
+        >
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>

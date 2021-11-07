@@ -18,6 +18,7 @@ import('./config/passport.js')
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as travelsRouter } from './routes/travels.js'
+import { router as reviewsRouter } from './routes/reviews.js'
 import { passUserToView } from './middleware/middleware.js'
 
 // create the express app
@@ -62,6 +63,7 @@ app.use(passUserToView)
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/travels', travelsRouter)
+app.use("/travels", reviewsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -70,6 +72,7 @@ app.use(function (req, res, next) {
 
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
+  res.locals.user = req.user
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 

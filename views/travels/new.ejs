@@ -1,0 +1,60 @@
+<%- include('../partials/html-head') %> <%- include('../partials/nav') %>
+
+<div class="container">
+  <h1>Add New Travel Log</h1>
+
+  <form action="/travels" method="post">
+    <div class="form-group row">
+      <label for="title" class="col-sm-2 col-form-label">Title</label>
+      <div class="col-sm-10">
+        <input type="text" placeholder="Title" class="form-control" name="title" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="rating" class="col-sm-2 col-form-label">Rating</label>
+      <div class="col-sm-10">
+        <input type="number" placeholder="Rating" class="form-control" name="rating" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="rating" class="col-sm-2 col-form-label">Cost</label>
+      <div class="col-sm-10">
+        <input type="number" placeholder="Cost" class="form-control" name="cost"/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="location" class="col-sm-2 col-form-label">Location</label>
+      <div class="col-sm-10">
+        <input type="text" placeholder="Location" class="form-control" name="location" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="worththetrip" class="col-sm-2 col-form-label"
+        >Worth The Trip</label
+      >
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="worththetrip"
+          id="worththetrip"
+          value="true"
+        />
+        <label class="form-check-label" for="worththetrip"> Yes </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="worththetrip"
+          id="worththetrip2"
+          value="false"
+        />
+        <label class="form-check-label" for="worththetrip2"> No </label>
+      </div>
+    </div>
+    <button class="button btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

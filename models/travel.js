@@ -8,13 +8,20 @@ const travelSchema = new Schema({
   cost: Number,
   worththetrip:Boolean,
   location:String,
-  creator: {
+  author: {
     id: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User"
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true
     },
-    name: String
-  }
+    name: String,
+  },
+  reviews: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Review"
+    }
+  ]
   // reviews: [reviewSchema,
 })
 
