@@ -18,6 +18,18 @@ function createReview(req, res) {
   });
 }
 
+function deleteReview(req, res) {
+  Travel.findByIdAndUpdate(req.params.id, {
+    $pull: {
+      reviews: req.params.review_id
+    }
+  }).then(travel=> {
+    res.redirect(`/travels/${req.params.id}`)
+  })
+  }
+
 export {
   createReview,
+  deleteReview as delete,
+
 }
