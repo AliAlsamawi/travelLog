@@ -57,7 +57,7 @@ function getTravelLog(req, res) {
       })
     })
     .catch((err) => {
-      res.json(err)
+      res.redirect('/')
     })
 }
 
