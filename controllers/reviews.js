@@ -28,8 +28,23 @@ function deleteReview(req, res) {
   })
   }
 
+  function edit(req, res) {
+    Travel.findById(req.params.id)
+    .then(review => {
+      res.render("reviews/edit", {
+        title: "Edit review",
+        review,
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect("/reviews")
+    })
+  }
+
 export {
   createReview,
   deleteReview as delete,
+  edit,
 
 }
