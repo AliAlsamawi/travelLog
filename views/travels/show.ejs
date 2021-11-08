@@ -4,7 +4,7 @@
   <div class="container">
     <h1>Show page</h1>
     <div class="card">
-      <h5 class="card-header"><%= travel.title %></h5>
+      <h2 class="card-header"><%= travel.title %></h2>
 
       <ul class="list-group">
         <li class="list-group-item">Rating:<%= travel.rating %></li>
@@ -28,7 +28,16 @@
             <form action="/travels/<%= travel._id %>/reviews/<%=review._id%>?_method=DELETE" method="post">
               <button class="btn-outline-danger">Delete Comment</button>
             </form>
+
           <% } %>
+
+          <% if (user && review.author.id.equals(user.profile._id)) { %>
+            <form action="/travels/<%= travel._id %>/reviews/<%=review._id%>?_method=DELETE" method="post">
+              <button class="btn-outline-danger">Edit review</button>
+            </form>
+            
+          <% } %>
+
         </div>
       </div>
     <% }) %>
