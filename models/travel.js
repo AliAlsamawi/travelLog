@@ -10,9 +10,9 @@ const travelSchema = new Schema({
   location:String,
   author: {
     id: {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-      required: true
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true
     },
     name: String,
   },

@@ -16,5 +16,5 @@ const ReviewScehma = new Schema({
 const Review = mongoose.model("Review", ReviewScehma)
 
 export { 
-  Review
+  Review,
 }
