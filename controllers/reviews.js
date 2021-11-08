@@ -31,15 +31,16 @@ function edit(req, res) {
     res.redirect("/reviews")
   })
 }
+
 function update(req, res) {
-  Taco.findById(req.params.id)
-  .then(taco => {
-    if (taco.owner.equals(req.user.profile._id)) {
+  Travel.findById(req.params.id)
+  .then(review => {
+    if (review.owner.equals(req.user.profile._id)) {
       // the person that created the taco is trying to edit the taco
-      req.body.tasty = !!req.body.tasty
-      taco.updateOne(req.body, {new: true})
+      req.body.review = !!req.body.review
+      review.updateOne(req.body, {new: true})
       .then(() => {
-        res.redirect(`/tacos/${taco._id}`)
+        res.redirect(`/review/${review._id}`)
       })
     } else {
       // the person that created the taco is NOT the person trying to edit the taco
@@ -48,9 +49,10 @@ function update(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/tacos")
+    res.redirect("/review")
   })
 }
+
 function deleteReview(req, res) {
   Travel.findByIdAndUpdate(req.params.id, {
     $pull: {
@@ -65,5 +67,6 @@ function deleteReview(req, res) {
 export {
   createReview,
   deleteReview as delete,
+  update,
   edit,
 }
