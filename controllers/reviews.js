@@ -33,24 +33,24 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  Travel.findById(req.params.id)
-  .then(review => {
-    if (review.owner.equals(req.user.profile._id)) {
-      // the person that created the taco is trying to edit the taco
-      req.body.review = !!req.body.review
-      review.updateOne(req.body, {new: true})
-      .then(() => {
-        res.redirect(`/travels/${req.params.id}`)
-      })
-    } else {
-      // the person that created the taco is NOT the person trying to edit the taco
-      throw new Error ("🚫 Not Authorized! 🚫")
-    }
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect(`/travels/${req.params.id}`)
-  })
+  console.log("help")
+  // Travel.findById(req.params.id)
+  // .then(review => {
+  //   if (review.owner.equals(req.user.profile._id)) {
+
+  //     req.body.review = !!req.body.review
+  //     review.updateOne(req.body, {new: true})
+  //     .then(() => {
+  //       res.redirect(`/travels/${req.params.id}`)
+  //     })
+  //   } else {
+  //     throw new Error ("🚫 Not Authorized! 🚫")
+  //   }
+  // })
+  // .catch(err => {
+  //   console.log(err)
+  //   res.redirect(`/travels/${req.params.id}`)
+  // })
 }
 
 function deleteReview(req, res) {
