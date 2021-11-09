@@ -9,13 +9,13 @@ function createReview(req, res) {
         id: req.user.profile._id,
         name: req.user.profile.name,
       },
-    };
+    }
     Review.create(body).then((review) => {
       travelLog.reviews.push(review._id)
       travelLog.save()
       res.redirect(`/travels/${req.params.id}`)
-    });
-  });
+    })
+  })
 }
 
 function edit(req, res) {
@@ -28,7 +28,7 @@ function edit(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/reviews")
+    res.redirect(`/travels/${req.params.id}`)
   })
 }
 
@@ -40,7 +40,7 @@ function update(req, res) {
       req.body.review = !!req.body.review
       review.updateOne(req.body, {new: true})
       .then(() => {
-        res.redirect(`/review/${review._id}`)
+        res.redirect(`/travels/${req.params.id}`)
       })
     } else {
       // the person that created the taco is NOT the person trying to edit the taco
@@ -49,7 +49,7 @@ function update(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect("/review")
+    res.redirect(`/travels/${req.params.id}`)
   })
 }
 

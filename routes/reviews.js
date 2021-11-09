@@ -8,6 +8,7 @@ const router = Router()
 router.post("/:id/reviews", isLoggedIn, reviewsCtrl.createReview)
 
 router.get("/:id/reviews/:review_id", reviewsCtrl.edit)
+// router.get()
 
 router.delete("/:id/reviews/:review_id", reviewsCtrl.delete)
 
