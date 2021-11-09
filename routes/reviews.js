@@ -9,7 +9,7 @@ router.post("/:id/reviews", isLoggedIn, reviewsCtrl.createReview)
 
 router.get("/:id/reviews/:review_id", reviewsCtrl.edit)
 
-router.put("/:id/edit", isLoggedIn, reviewsCtrl.update)
+router.put("/:id", isLoggedIn, reviewsCtrl.update)
 
 router.delete("/:id/reviews/:review_id", reviewsCtrl.delete)
 

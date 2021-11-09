@@ -3,11 +3,10 @@
 <div class="container">
     <h1>Edit review</h1>
     <label>
-    <form action="/travels/<%=review._id %>
-      ?_method=PUT" method="POST">
+    <form action="/travels/<%=review._id %>?_method=PUT" method="POST">
 
     <input type="text" placeholder="enter text" name="review"
-    value="<%= review.name%>"
+    value="<%= review.review%>"
     autocomplete="off"
     >
   </label>

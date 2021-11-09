@@ -35,11 +35,8 @@
             <form action="/travels/<%= travel._id %>/reviews/<%=review._id%>?_method=PUT" method="POST">
               <button class="btn-outline-danger">Old edit button</button>
             </form>
-            <form action="/travels/<%= travel._id %>/reviews/<%=review._id%>" method="get">
-              <button> Edit
-              </button>
-
-            </form>
+            <a href="/travels/<%= travel._id %>/reviews/<%= review._id %>">Edit comment</a>
+           
             
           <% } %>
 
