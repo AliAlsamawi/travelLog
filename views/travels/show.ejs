@@ -33,7 +33,7 @@
 
           <% if (user && review.author.id.equals(user.profile._id)) { %>
             <form action="/travels/<%= travel._id %>/reviews/<%=review._id%>?_method=PUT" method="POST">
-              <button class="btn-outline-danger">Old edit button</button>
+              
             </form>
             <a href="/travels/<%= travel._id %>/reviews/<%= review._id %>">Edit comment</a>
            

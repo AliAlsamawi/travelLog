@@ -1,5 +1,5 @@
-import { Review } from "../models/review.js";
-import { Travel } from "../models/travel.js";
+import { Review } from "../models/review.js"
+import { Travel } from "../models/travel.js"
 
 function createReview(req, res) {
   Travel.findById(req.params.id).then((travelLog) => {
@@ -9,13 +9,13 @@ function createReview(req, res) {
         id: req.user.profile._id,
         name: req.user.profile.name,
       },
-    };
+    }
     Review.create(body).then((review) => {
-      travelLog.reviews.push(review._id);
-      travelLog.save();
-      res.redirect(`/travels/${req.params.id}`);
-    });
-  });
+      travelLog.reviews.push(review._id)
+      travelLog.save()
+      res.redirect(`/travels/${req.params.id}`)
+    })
+  })
 }
 
 function edit(req, res) {
@@ -24,19 +24,19 @@ function edit(req, res) {
       res.render("reviews/edit", {
         title: "Edit review",
         review,
-      });
+      })
       // res.json(review)
     })
     .catch((err) => {
-      console.log(err);
-      res.redirect(`/travels/${req.params.id}`);
-    });
+      console.log(err)
+      res.redirect(`/travels/${req.params.id}`)
+    })
 }
 
 function update(req, res) {
-  console.log(req.params, "help");
+  console.log(req.params, "help")
   // Review.findOne({_id: req.params.id}).then((review) => {
-  //   console.log(review, "review====>:");
+  //   console.log(review, "review====>:")
   // }).catch(err => console.log(err))
 
   Review.findById(req.params.id)
@@ -44,22 +44,15 @@ function update(req, res) {
       console.log(review)
       review.review = req.body.review
       Review.findByIdAndUpdate(req.params.id, review, { new: true }).then(() => {
-        res.redirect(`/travels`);
-      });
+        res.redirect(`/travels`)
+      })
     })
     .catch((err) => {
-      console.log(err);
-      res.redirect(`/travels`);
-    });
+      console.log(err)
+      res.redirect(`/travels`)
+    })
 }
 
- // Review.findByIdAndUpdate(req.params.id, req.body.review).then(review => {
-  //   console.log(review)
-  //   res.redirect("/travels")
-  // }).catch(err => {
-  //   console.log(err)
-  //   res.redirect("/")
-  // })
 
 function deleteReview(req, res) {
   Travel.findByIdAndUpdate(req.params.id, {
@@ -67,8 +60,13 @@ function deleteReview(req, res) {
       reviews: req.params.review_id,
     },
   }).then((travel) => {
-    res.redirect(`/travels/${req.params.id}`);
-  });
+    res.redirect(`/travels/${req.params.id}`)
+  })
 }
 
-export { createReview, deleteReview as delete, update, edit };
+export { 
+  createReview, 
+  deleteReview as delete, 
+  update, 
+  edit, 
+}
