@@ -17,3 +17,7 @@ h1{
 nav{
   background-image: linear-gradient(to right top, #c80ea2, #98116e, #671443, #361222, #000000);
 }
+h2{
+  color: white;
+  margin: 100px;
+}
