@@ -1,0 +1,11 @@
+body{
+text-align: center;
+
+}
+img{
+  background-color: #999;
+  width: 200px;
+  height: 180px;
+  display: inline-block;
+  overflow: hidden;
+}
