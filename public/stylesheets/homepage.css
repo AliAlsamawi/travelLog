@@ -1,11 +1,19 @@
+
 body{
 text-align: center;
-
+background-image:url("https://i.imgur.com/GT3iaMo.jpg");
+background-repeat:no-repeat;
+background-size: cover;
+font-family:'Dancing Script', cursive;
 }
-img{
-  background-color: #999;
-  width: 200px;
-  height: 180px;
-  display: inline-block;
-  overflow: hidden;
+body,
+html{
+min-height: 100vh;
+}
+
+h1{
+  color: white;
+}
+nav{
+  background-image: linear-gradient(to right top, #c80ea2, #98116e, #671443, #361222, #000000);
 }
