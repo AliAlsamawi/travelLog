@@ -1,0 +1,70 @@
+.neonText{
+  color: #ab4f6c;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
+}
+.card{
+  color: #ab4f6c;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
+}
+
+h1{
+  font-family:'Dancing Script', cursive;
+  font-size: 30px;
+  color: white ;
+}
+
+section{
+  background-image: linear-gradient(to right top, #051937, #59335f, #ab4f6c, #e98164, #ffc75f);
+  min-height: 100vh;
+}
+
+.list-group-item{
+  background-image: linear-gradient(to right top, #d16ba5, #f9718f, #ff8370, #ffa24e, #ffc731, #eddb37, #d8ed48, #bdff63, #93ff8f, #6fffb7, #58ffd8, #5ffbf1);
+  color: #39a48bd4;
+  
+}
+nav{
+  background-image: linear-gradient(to right top, #d16ba5, #f9718f, #ff8370, #ffa24e, #ffc731, #eddb37, #d8ed48, #bdff63, #93ff8f, #6fffb7, #58ffd8, #5ffbf1); 
+  font-family:'Dancing Script', cursive;
+
+}
+h5{
+  font-family:'Dancing Script', cursive;
+  font-size: 20px;
+  }
+  .show-page{
+    text-align: center;
+    background-image:url("https://i.imgur.com/GT3iaMo.jpg");
+    height: 100vh;
+  }
+  label{
+    color: white;
+  }
+  div{
+  color: violet;
+  }
+  .card-header{
+    background-image: linear-gradient(to right top, #d16ba5, #f9718f, #ff8370, #ffa24e, #ffc731, #eddb37, #d8ed48, #bdff63, #93ff8f, #6fffb7, #58ffd8, #5ffbf1);
+  }
+  .card{
+    background-image: linear-gradient(to right top, #d16ba5, #f9718f, #ff8370, #ffa24e, #ffc731, #eddb37, #d8ed48, #bdff63, #93ff8f, #6fffb7, #58ffd8, #5ffbf1);
+  }
+  .blockquote{
+    background-image: linear-gradient(to right top, #d16ba5, #f9718f, #ff8370, #ffa24e, #ffc731, #eddb37, #d8ed48, #bdff63, #93ff8f, #6fffb7, #58ffd8, #5ffbf1);
+  }

@@ -13,7 +13,7 @@
 
 body{
 text-align: center;
-background-image:url("https://i.imgur.com/GT3iaMo.jpg");
+
 
 background-repeat:no-repeat;
 background-size: cover;
@@ -77,7 +77,7 @@ h1{
 label{
  color:#0ceddecf ; 
 }
-
-
-
-
+.col-sm-2{
+  font-size: 20px;
+  margin: auto;
+}

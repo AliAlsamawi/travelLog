@@ -25,7 +25,6 @@ function edit(req, res) {
         title: "Edit review",
         review,
       })
-      // res.json(review)
     })
     .catch((err) => {
       console.log(err)
