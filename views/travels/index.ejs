@@ -1,7 +1,8 @@
 <%- include('../partials/html-head') %> <%- include('../partials/nav') %>
+<link rel="stylesheet" href="stylesheets/index2.css">
 
 <section>
-  <h1>travels</h1>
+  <h1 class="neonText">Travels</h1>
   <h2></h2>
   <div class="row">
     <% travels.forEach(travel => { %>
@@ -10,7 +11,7 @@
         <h5 class="card-header"><%= travel.title %></h5>
 
         <ul class="list-group">
-          <li class="list-group-item">Rating:<%= travel.rating %></li>
+          <li class="list-group-item" >Rating:<%= travel.rating %></li>
           <li class="list-group-item">Location:<%= travel.location %></li>
           <li class="list-group-item">Cost:<%= travel.cost %></li>
         </ul>

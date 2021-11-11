@@ -35,9 +35,7 @@ function edit(req, res) {
 
 function update(req, res) {
   console.log(req.params, "help")
-  // Review.findOne({_id: req.params.id}).then((review) => {
-  //   console.log(review, "review====>:")
-  // }).catch(err => console.log(err))
+
 
   Review.findById(req.params.id)
     .then((review) => {
