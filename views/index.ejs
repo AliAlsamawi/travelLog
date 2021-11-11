@@ -9,7 +9,7 @@
 
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1 class="neonText" id="h1">Welcome <%= user ? user.profile.name : "friend" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img 
@@ -18,9 +18,9 @@
       >
     </div>
     <% } %>
-    <h2>Design to log people's travels to help them to discover beautiful destinations. This website allows people to find places based on locations, cost, and if it’s worth the trip. Users will be able to add reviews and read other's opinions. 
-
+    <h2 class="neonText" id="h2">This website is design to log people's travels to help them to discover beautiful destinations. This website allows people to find places based on locations, cost, and if it’s worth the trip. Users will be able to add reviews and read other's opinions. 
     </h2>
+    <!-- <img src="https://media0.giphy.com/media/9GhVS2ZVaI1Yk/giphy.gif" class="gif"> -->
 </main>
 
 <%- include('./partials/footer') %>

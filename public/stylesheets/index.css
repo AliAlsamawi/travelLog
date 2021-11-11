@@ -1,7 +1,20 @@
+.neonText {
+  color: black;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
+}
 
 body{
 text-align: center;
 background-image:url("https://i.imgur.com/GT3iaMo.jpg");
+
 background-repeat:no-repeat;
 background-size: cover;
 font-family:'Dancing Script', cursive;
@@ -11,13 +24,33 @@ html{
 min-height: 100vh;
 }
 
-h1{
-  color: white;
-}
+
 nav{
   background-image: linear-gradient(to right top, #c80ea2, #98116e, #671443, #361222, #000000);
+display: flex;
 }
-h2{
-  color: white;
-  margin: 100px;
+
+#h2{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: black;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  font-size: 50px;
 }
+.neonText{
+  color: rgb(254, 254, 254);
+display: flex; 
+justify-content: space-between;
+
+}
+
+

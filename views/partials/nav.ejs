@@ -1,15 +1,17 @@
 <% if (!user) { %>
   <link rel="stylesheet" href="/stylesheets/siwg.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+
   
 <% } %>
 </head>
 <body>
 <nav>
 
-  <a href="/travels">Travel Log</a>
+  <a href="/travels" class="neonText">Travel Log</a>
   <% if (user) { %>
-    <a href="/travels/new">Create New Log</a>
-    <a href="/auth/logout">Logout</a>
+    <a href="/travels/new" class="neonText">Create New Log</a>
+    <a href="/auth/logout" class="neonText">Logout</a>
   <% } else { %>
     <a href="/auth/google" class="siwg-link">
       <button type="submit" class="siwg">
