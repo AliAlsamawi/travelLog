@@ -29,6 +29,10 @@ nav{
   background-image: linear-gradient(to right top, #c80ea2, #98116e, #671443, #361222, #000000);
 display: flex;
 }
+#h1{
+  font-size: 40px;
+
+}
 
 #h2{
   background-color: rgb(0,0,0); /* Fallback color */
@@ -44,13 +48,20 @@ display: flex;
   width: 80%;
   padding: 20px;
   text-align: center;
-  font-size: 50px;
+  font-size: 400%;
+
 }
 .neonText{
   color: rgb(254, 254, 254);
-display: flex; 
-justify-content: space-between;
+  font-size: 300%;
 
 }
+
+.gif{
+  position:absolute;
+  bottom:0px;
+  left:70%;
+}
+
 
 
