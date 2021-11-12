@@ -1,4 +1,4 @@
-# Welcome to Cool-Tavel-logs #
+# Welcome to Cool-Travel-logs #
 
 ## Getting Started : ##
 This website is design to log people's travels to help them to discover beautiful destinations. This website allows people to find places based on locations, cost, and if it’s worth the trip. Users will be able to add reviews and read other's opinions.
@@ -25,6 +25,8 @@ https://trello.com/b/5Vk1zaP4/unite-2-project
 * Express
 * MongoDB
 * Mongoose
+* Google fonts
+* Bootstrap
 
 
 ## Next Steps: ##
