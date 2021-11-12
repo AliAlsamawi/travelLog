@@ -1,4 +1,4 @@
-# Welcome to Test Your Might #
+# Welcome to Cool-Tavel-logs #
 
 ## Getting Started : ##
 This website is design to log people's travels to help them to discover beautiful destinations. This website allows people to find places based on locations, cost, and if it’s worth the trip. Users will be able to add reviews and read other's opinions.
