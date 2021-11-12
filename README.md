@@ -8,21 +8,27 @@ This website is design to log people's travels to help them to discover beautifu
 
 <img src="https://user-images.githubusercontent.com/90650175/141409750-d5d96c88-2a02-44bc-a441-987c52cffc53.png">
 <img src="https://user-images.githubusercontent.com/90650175/141411096-5bdd92a2-7f7d-44f2-964d-4f2a27871c3c.png">
-<img src="https://user-images.githubusercontent.com/90650175/141411096-5bdd92a2-7f7d-44f2-964d-4f2a27871c3c.png">
+<img src="https://user-images.githubusercontent.com/90650175/141413570-3a92a2fd-cc70-4db1-b57c-4bbfe4e24903.png">
 
 ## Deployed link: ## 
-https://testyourmight.netlify.app/
+https://cool-travel-logs.herokuapp.com/
 
-wireframe link:
-https://whimsical.com/project-idea-AHAxFeEweBFNGJKstBMPVo
+## Trello board: ##
+https://trello.com/b/5Vk1zaP4/unite-2-project
 
 ## Technologies Used: ##
-* Html
-* JavaScript 
+* JavaScript
+* HTML
+* EJS
 * CSS
+* Node.js
+* Express
+* MongoDB
+* Mongoose
+
 
 ## Next Steps: ##
-I will like to add a harder levels, with less time and more cards.
+I will like to add an upload functionality. This will increase the users experince.
 
 
 
