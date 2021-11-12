@@ -6,7 +6,9 @@ This website is design to log people's travels to help them to discover beautifu
 
 <img src= "https://user-images.githubusercontent.com/90650175/141409361-8e8e71c0-93f8-4a54-8dc1-ce91e60b0e8a.png">
 
-<img src= "https://user-images.githubusercontent.com/90650175/138370074-aa28be26-4400-4b60-9c17-552bd9b096a7.png">
+<img src="https://user-images.githubusercontent.com/90650175/141409750-d5d96c88-2a02-44bc-a441-987c52cffc53.png">
+<img src="https://user-images.githubusercontent.com/90650175/141411096-5bdd92a2-7f7d-44f2-964d-4f2a27871c3c.png">
+<img src="https://user-images.githubusercontent.com/90650175/141411096-5bdd92a2-7f7d-44f2-964d-4f2a27871c3c.png">
 
 ## Deployed link: ## 
 https://testyourmight.netlify.app/
